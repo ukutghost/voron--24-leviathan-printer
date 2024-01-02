@@ -29,18 +29,17 @@ cors_domains =
 enable_object_processing = True
 
 [power printer]
-type = homeassistant
-address = 192.168.0.14
-port = 8123
-device = switch.leviathan_switch_0
-token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIzMjk5ZTcyYzgwZTU0Njc1Yjc0NjNkZjI1OTk0MjNkYyIsImlhdCI6MTcwMzc3MDYxOSwiZXhwIjoyMDE5MTMwNjE5fQ.PdyZkx2hthYKCO5_FeeuQdaZjfdTRPOWXPCSRa1Wxbc
-domain = switch
-status_delay = 1.0
+type = shelly
+address = 192.168.0.232
 off_when_shutdown = False
 on_when_job_queued = True
 locked_while_printing = True
 restart_klipper_when_powered = True
 restart_delay = 1
+
+[spoolman]
+server = http://192.168.0.253:7912
+sync_rate = 5
 
 [update_manager]
 channel = dev
